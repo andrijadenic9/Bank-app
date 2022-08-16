@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Bank APP</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div class="countainer-fluid">
+		<div class="jumbotron">
+			<div class="col-10 offset-1">
+				<div class="heading">
+					<h2>Bank App</h2>
+					<p>An application for monitoring users bank accounts</p>
+				</div>
+				<ul class="nav">
+					<button class="btn btn-primary" data-id="account-nav">Account</button>
+					<button class="btn btn-success" data-id="add-account-nav">Add Account</button>
+					<button class="btn btn-danger" data-id="edit-delete-nav">Edit / Delete</button>
+					<button class="btn btn-dark" data-id="bank-deposit-nav">Bank Deposit</button>
+					<input class="form-control search" type="search" placeholder="Search">
+				</ul>
+			</div>
+		</div>
+		<!-- * MAIN VIEW -->
+		<div class="col-10 offset-1" data-id="main-view">
+			<h3>Accounts</h3>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>NAME</th>
+						<th>DEPOSIT</th>
+						<th>CREDIT CARD</th>
+					</tr>
+				</thead>
+				<tbody data-id="main-table">
+
+				</tbody>
+			</table>
+		</div>
+
+		<!-- * ADD ACCOUNT VIEW -->
+		<div class="col-10 offset-1" data-id="add-account-view">
+			<h3>Add Account</h3>
+			<output type="text" placeholder="id" class="form-control" data-id="input-id"></output></br>
+			<input type="text" placeholder="name" class="form-control" data-id="input-name"></br>
+			<input type="number" placeholder="deposit (only numbers)" class="form-control" data-id="input-deposit"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /><br>
+			<!-- <input type="text" placeholder="deposit" class="form-control" data-id="input-deposit"></br> -->
+			<!-- <input type="text" placeholder="credit card" class="form-control" data-id="input-credit-card"></br> -->
+			<label for="credit-cards">Credit Card</label>
+			<select name="credit-cards" data-id="input-credit-card" id="credit-cards" class="form-control">
+			</select><br>
+
+			<button class="btn btn-primary form-control" data-id="input-btn-save">Save</button>
+		</div> <!-- * ADD ACCOUNT END -->
+
+		<!-- * EDIT/DELETE VIEW -->
+		<div class="col-10 offset-1" data-id="edit-delete-view">
+			<h3>Edit/Delete</h3>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>NAME</th>
+						<th>DEPOSIT</th>
+						<th>CREDIT CARD</th>
+						<th>EDIT</th>
+						<th>DELETE</th>
+					</tr>
+				</thead>
+				<tbody data-id="edit-delete-table">
+
+				</tbody>
+			</table>
+		</div> <!-- * EDIT/DELETE END -->
+
+		<!-- * Only Edit VIEW -->
+		<div class="col-10 offset-1" data-id="edit-view">
+			<h3>Edit Account</h3>
+			<output type="text" placeholder="id" class="form-control" data-id="input-id-edit"></output></br>
+			<input type="text" placeholder="name" class="form-control" data-id="input-name-edit"></br>
+			<input type="number" placeholder="deposit (only numbers)" class="form-control" data-id="input-deposit-edit"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /><br>
+			<!-- <input type="text" placeholder="deposit" class="form-control" data-id="input-deposit-edit"></br> -->
+			<!-- <input type="text" placeholder="credit card" class="form-control" data-id="input-credit-card-edit"></br> -->
+			<select class="form-control" data-id="input-credit-card-edit"></select><br>
+			<button class="btn btn-primary form-control" data-id="input-btn-edit">Edit/Save</button>
+		</div> <!-- * Only Edit END -->
+
+		<div class="col-10 offset-1" data-id="bank-deposit-view">
+			<h3 class="mb-5">Bank Deposit</h3>
+			<div class="text-center">
+				<p class="current-deposit">Current bank deposit:<samp class="w-75 m-3 p-3 text-monospace"
+						style="font-size: 22px;" data-id="bank-deposit">12.000,00 RSD</samp></p>
+
+			</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

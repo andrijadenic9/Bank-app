@@ -1,0 +1,78 @@
+[data-id="add-account-table"] {
+	display: none;
+}
+
+[data-id="add-account-view"] {
+	display: none;
+}
+
+[data-id="edit-delete-view"] {
+	display: none;
+}
+
+[data-id="edit-view"] {
+	display: none;
+}
+
+[data-id="bank-deposit-view"] {
+	display: none;
+}
+
+.nav {
+	display: inline;
+}
+
+button {
+	margin-right: 5px;
+}
+
+.nav button:last-child {
+	margin: 0;
+}
+
+.search {
+	width: 180px;
+	float: right;
+}
+
+.current-deposit {
+	border: 1px solid #bfbfbf;
+	padding: 20px;
+	border-radius: 4px;
+	background: #eee;
+	padding: 40px;
+}
+
+.heading {
+	margin-bottom: 2.8rem;
+}
+
+.heading h2 {
+	font-size: 2.8rem;
+	margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+samp {
+	font-size: 22px;
+	border: 1px solid white;
+	border-radius: 4px;
+	background: white;
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+
+output {
+	cursor: not-allowed;
+}
+
+.jumpotron {
+	padding: 2rem 0;
+}
+
+@media (min-width: 576px) {
+	.jumbotron {
+		padding: 4rem 0;
+	}
+}
